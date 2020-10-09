@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* */
+body {
+  display: grid;
+  grid-template-columns: 1fr 501px 1fr;
+  grid-gap: 0;
+  grid-auto-flow: column;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  display: grid;
+  justify-self: center;
+  z-index: 1;
+}
+
+.slide {
+  width: 2500px;
+  position: absolute;
+  align-self: center;
+  overflow: hidden;
+  left: 550px; /* -510px ( 550px 40px -470px -980px */
+  transition: 1s;
+}
+
+img {
+  position: relative;
+  width: 500px;
+  margin-right: 5px;
+}
+
+.arrows {
+  display: grid;
+  grid-auto-flow: column;
+  align-self: end;
+}
+
+.arrow {
+  font-size: 2em;
+  font-weight: bold;
+  opacity: 0.5;
+  display: inline;
+  margin: 0 10px;
+}
+
+.arrow:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.left-arrow {
+  justify-self: start;
+}
+
+.right-arrow {
+  justify-self: end;
+}
+
+.media-btns {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: center;
+  align-self: end;
+}
+
+.media {
+  background: black;
+  opacity: 0.5;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.media:hover {
+  opacity: 1;
+}
+
+.frame {
+  background: white;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.frame-right {
+  right: 0;
+}
+
+.frame-left {
+  left: 0;
+}
+
+.darken {
+  opacity: 1;
+}
